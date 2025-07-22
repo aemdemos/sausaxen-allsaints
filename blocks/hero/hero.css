@@ -1,3 +1,4 @@
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -43,5 +44,71 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+}
+
+/* ---- original .hero.hero20 from base CSS removed ---- */
+
+/* ---- original .hero.hero20 from generated CSS removed ---- */
+
+.hero.hero20 {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32px 0;
+  width: 100%;
+  min-height: 1px;
+  box-sizing: border-box;
+}
+
+/* --- rest of generated CSS --- */
+.hero.hero20 > div:last-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero.hero20 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero.hero20 h2 {
+  font-family: Graphik, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #00205B;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  line-height: 1.15;
+  max-width: 520px;
+  letter-spacing: 0;
+}
+
+.hero.hero20 p {
+  font-family: Graphik, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #00205B;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 520px;
+  display: block;
+}
+
+@media (width <= 599px) {
+  .hero.hero20 {
+    padding: 20px 8px;
+  }
+
+  .hero.hero20 h2,
+  .hero.hero20 p {
+    max-width: 95vw;
   }
 }
