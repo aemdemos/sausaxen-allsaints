@@ -606,7 +606,7 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Columns",
       "cluster": 26,
       "source": "Columns",
       "target": "Columns (columns26)",
