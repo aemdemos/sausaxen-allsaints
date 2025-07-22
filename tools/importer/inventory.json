@@ -412,22 +412,6 @@
       ]
     },
     {
-      "name": "new",
-      "cluster": 16,
-      "source": "Columns",
-      "target": "Columns (columns16)",
-      "key": "columns16",
-      "instances": [
-        {
-          "url": "https://www.nrma.com.au/home-loans/complaints",
-          "urlHash": "b7fdc77be2b826b7d51534d4f105875352f80b03",
-          "uuid": "b7fdc77b-06-fee9d01b2f66a50eb5138d5cb917043fc14fe1f0",
-          "xpath": "/html[1]/body[1]/footer[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]",
-          "section": "section-4"
-        }
-      ]
-    },
-    {
       "name": "Columns",
       "cluster": 18,
       "source": "Columns",
