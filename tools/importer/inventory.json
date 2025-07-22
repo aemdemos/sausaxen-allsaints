@@ -487,10 +487,10 @@
     },
     {
       "name": "Table",
-      "cluster": 21,
+      "cluster": 36,
       "source": "Table",
-      "target": "Table (table21)",
-      "key": "table21",
+      "target": "Table (table36)",
+      "key": "table36",
       "instances": [
         {
           "url": "https://www.nrma.com.au/home-loans/rates-fees",
