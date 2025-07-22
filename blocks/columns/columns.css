@@ -1,3 +1,4 @@
+/* --- Base Columns Styles --- */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -32,6 +33,153 @@
   }
 }
 
+/* --- .columns8 --- */
+.columns.columns8 {
+  background: #faf8f6;
+  padding: 24px 0;
+  font-family: Graphik, Helvetica, Arial, sans-serif;
+}
+
+.columns.columns8 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (width <= 900px) {
+  .columns.columns8 > div {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12px;
+    max-width: 100%;
+  }
+}
+
+.columns.columns8 .columns-img-col {
+  flex: 0 0 340px;
+  max-width: 340px;
+  min-width: 200px;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.columns.columns8 .columns-img-col img,
+.columns.columns8 .columns-img-col picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  min-height: 180px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.columns.columns8 > div > div:last-child {
+  flex: 1 1 340px;
+  max-width: 360px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #1e237e;
+  font-size: 15px;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+
+@media (width <= 900px) {
+  .columns.columns8 > div > div:last-child {
+    max-width: 100%;
+    min-width: 0;
+    font-size: 16px;
+    padding-top: 0;
+  }
+}
+
+/* Heading: navy, medium weight, tight spacing, left-aligned */
+.columns.columns8 > div > div:last-child h2 {
+  font-size: 21px;
+  color: #1e237e;
+  font-weight: 500;
+  margin: 0 0 6px;
+  line-height: 1.2;
+  font-family: Graphik, Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+/* Paragraph: compact, dark gray, tight spacing */
+.columns.columns8 > div > div:last-child p {
+  font-size: 15px;
+  color: #2d2d2d;
+  margin: 0 0 6px;
+  line-height: 1.35;
+  font-family: Graphik, Helvetica, Arial, sans-serif;
+}
+
+/* List: no bullets, minimal spacing, tight grouping */
+.columns.columns8 > div > div:last-child ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.columns.columns8 > div > div:last-child ul li {
+  margin-bottom: 3px;
+  font-size: 15px;
+  position: relative;
+}
+
+/* Links: navy, underline, underline offset, chevron after, denser line height */
+.columns.columns8 > div > div:last-child ul li a {
+  color: #1e237e;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: 15px;
+  font-family: Graphik, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: none;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 16px;
+  line-height: 1.2;
+  position: relative;
+}
+
+/* Chevron after links: SVG background */
+.columns.columns8 > div > div:last-child ul li a::after {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  margin-bottom: 1px;
+  background: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><polyline points="2,1 6,4 2,7" fill="none" stroke="%231e237e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-size: 8px 8px;
+  vertical-align: middle;
+  position: static;
+  box-sizing: border-box;
+}
+
+@media (width <= 600px) {
+  .columns.columns8 {
+    padding: 10px 0;
+  }
+
+  .columns.columns8 > div {
+    padding: 0 2px;
+  }
+}
+
+/* --- .columns3 --- */
 .columns.columns3 {
   max-width: 1000px;
   margin: 48px auto;
@@ -239,7 +387,7 @@
   margin-bottom: 0;
 }
 
-/* GENERATED CSS */
+/* --- MAIN LAYOUT: 1st column left, 2nd+3rd grouped tightly as FAQ area --- */
 .columns.columns7 {
   background: #fff;
   padding: 0;
