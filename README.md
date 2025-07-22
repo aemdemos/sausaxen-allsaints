@@ -4,8 +4,8 @@ This is a project created by AEMY.
 
 ## Environments
 
-- Preview: https://main--sausaxen-allsaints--aemdemos.aem.page/
-- Live: https://main--sausaxen-allsaints--aemdemos.aem.live/
+- Preview: https://main--sausaxen-allsaints--aemdemos.aem.page/home-loans
+- Live: https://main--sausaxen-allsaints--aemdemos.aem.live/home-loans
 
 ## Installation
 
