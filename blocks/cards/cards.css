@@ -220,24 +220,6 @@
   background-size: 12px 12px;
 }
 
-@media (width <= 700px) {
-  .cards.cards12 {
-    padding: 8px 0 8px 16px;
-  }
-
-  .cards.cards12 > ul {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
-  .cards.cards12 > ul > li:first-child {
-    border-left: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-}
-
 .cards.cards14 {
   background: #f7f7e8;
   padding: 32px 0;
@@ -497,6 +479,24 @@
   background: #0a2a63;
 }
 
+@media (width <= 700px) {
+  .cards.cards12 {
+    padding: 8px 0 8px 16px;
+  }
+
+  .cards.cards12 > ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .cards.cards12 > ul > li:first-child {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
 @media (width <= 900px) {
   .cards.cardsnoimages28 ul {
     flex-direction: column;
@@ -521,6 +521,43 @@
     max-width: 100%;
     min-width: 0;
     width: 100%;
+  }
+
+  .cards {
+    padding: 32px 0;
+  }
+
+  .cards > ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cards > ul > li {
+    min-height: 0;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .cards > ul > li > .cards-card-body {
+    padding: 12px 8px;
+    min-width: 0;
+  }
+
+  .cards > ul > li > .cards-card-body:last-child {
+    padding: 16px 8px;
+  }
+}
+
+@media (width <= 1150px) {
+  .cards.cards6 > ul {
+    max-width: 98vw;
+    gap: 24px;
+  }
+
+  .cards.cards6 > ul > li {
+    min-width: 260px;
+    max-width: 340px;
+    padding: 36px 16px 28px;
   }
 }
 
@@ -576,7 +613,7 @@
   margin: 0 auto 36px;
   width: 32px;
   height: 32px;
-  background: url('data:image/svg+xml;utf8,<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="%23001A70"/><path d="M11 9.6A1.6 1.6 0 0 1 12.6 8h6.8A1.6 1.6 0 0 1 21 9.6v12.8a1.6 1.6 0 0 1-1.6 1.6h-6.8A1.6 1.6 0 0 1 11 22.4V9.6zm1.6 0v12.8h6.8V9.6h-6.8zm1.6 2.4h1.6v1.6h-1.6v-1.6zm3.2 0h1.6v1.6h-1.6v-1.6zm-3.2 3.2h1.6v1.6h-1.6v-1.6zm3.2 0h1.6v1.6h-1.6v-1.6zm-3.2 3.2h1.6v1.6h-1.6v-1.6zm3.2 0h1.6v1.6h-1.6v-1.6z" fill="%23fff"/></svg>') no-repeat center center/contain;
+  background: url("data:image/svg+xml;utf8,<svg width='32' height='32' fill='none' xmlns='http://www.w3.org/2000/svg'><rect width='32' height='32' rx='8' fill='%23001A70'/><path d='M11 9.6A1.6 1.6 0 0 1 12.6 8h6.8A1.6 1.6 0 0 1 21 9.6v12.8a1.6 1.6 0 0 1-1.6 1.6h-6.8A1.6 1.6 0 0 1 11 22.4V9.6zm1.6 0v12.8h6.8V9.6h-6.8zm1.6 2.4h1.6v1.6h-1.6v-1.6zm3.2 0h1.6v1.6h-1.6v-1.6zm-3.2 3.2h1.6v1.6h-1.6v-1.6zm3.2 0h1.6v1.6h-1.6v-1.6zm-3.2 3.2h1.6v1.6h-1.6v-1.6zm3.2 0h1.6v1.6h-1.6v-1.6z' fill='%23fff'/></svg>") no-repeat center center/contain;
   border-radius: 8px;
 }
 
@@ -643,40 +680,12 @@
   background: #001059;
 }
 
-@media (width <= 1150px) {
-  .cards.cards6 > ul {
-    max-width: 98vw;
-    gap: 24px;
-  }
-
-  .cards.cards6 > ul > li {
-    min-width: 260px;
-    max-width: 340px;
-    padding: 36px 16px 28px;
-  }
-}
-
-@media (width <= 900px) {
-  .cards.cards6 > ul {
-    flex-direction: column;
-    align-items: center;
-    max-width: 96vw;
-    gap: 24px;
-  }
-
-  .cards.cards6 > ul > li {
-    max-width: 420px;
-    min-width: 0;
-    width: 100%;
-  }
-}
-
-
 .cards {
   padding: 48px 0;
   background: #fff;
   max-width: 1100px;
   margin: 0 auto;
+  border-left: none;
 }
 
 .cards > ul {
@@ -702,7 +711,6 @@
   padding: 0;
 }
 
-/* Always reserve two columns inside the card with flexbox */
 .cards > ul > li > .cards-card-body {
   flex: 1 1 50%;
   display: flex;
@@ -716,19 +724,16 @@
   border: none;
 }
 
-/* Make sure empty first column still reserves side space */
 .cards > ul > li > .cards-card-body:first-child {
   min-width: 32px;
 }
 
-/* Center the right-side content and allow button to size to content */
 .cards > ul > li > .cards-card-body:last-child {
   justify-content: center;
   align-items: center;
   padding: 24px 20px;
 }
 
-/* Remove "pill" look from buttons/links, let card act as the only background */
 .cards .button-container .button,
 .cards .button-container a.button {
   display: inline-block;
@@ -752,7 +757,6 @@
   text-overflow: ellipsis;
 }
 
-/* Ensure all links inside cards look like buttons for visual consistency */
 .cards > ul > li > .cards-card-body:last-child a:not(.button) {
   display: inline-block;
   width: auto;
@@ -773,40 +777,34 @@
   text-decoration: none;
 }
 
-/* Button hover effect */
 .cards .button-container .button:hover,
 .cards > ul > li > .cards-card-body:last-child a:not(.button):hover {
   background: #16316f;
 }
 
-/* Responsive: stack cards, adjust paddings and grid */
-@media (width <= 900px) {
-  .cards {
-    padding: 32px 0;
-  }
-
-  .cards > ul {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .cards > ul > li {
-    min-height: 0;
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .cards > ul > li > .cards-card-body {
-    padding: 12px 8px;
-    min-width: 0;
-  }
-
-  .cards > ul > li > .cards-card-body:last-child {
-    padding: 16px 8px;
-  }
+.cards.cards1 {
+  position: relative;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #000;
+  background-image: linear-gradient(to bottom, #020864 16px, #000 16px, #000 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 16px, 100% 100%;
+  background-position: top left, top left;
+  min-height: 200px;
 }
 
-/* Remove possible left border artifact from outermost container */
-.cards {
-  border-left: none;
+.cards.cards1 > ul {
+  background: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
