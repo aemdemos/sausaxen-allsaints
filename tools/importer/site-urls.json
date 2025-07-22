@@ -6,7 +6,8 @@
       "url": "https://www.nrma.com.au/home-loans",
       "source": "CRAWL",
       "targetPath": "/home-loans",
-      "id": "c6fa4982f4af50718d8de8eb73ed3f66c40ee9ff"
+      "id": "c6fa4982f4af50718d8de8eb73ed3f66c40ee9ff",
+      "status": "EXCLUDED"
     },
     {
       "url": "https://www.nrma.com.au/home-loans/borrowing-calculator",
@@ -56,5 +57,14 @@
       "targetPath": "/home-loans/repayments-calculator",
       "id": "331fb09800cff78fef525b022a936269e0486717"
     }
-  ]
+  ],
+  "extractionErrors": [],
+  "crawlOptions": {
+    "timeout": 0,
+    "limit": 0,
+    "sameDomain": false,
+    "keepHash": false,
+    "inclusionPatterns": [],
+    "exclusionPatterns": []
+  }
 }
