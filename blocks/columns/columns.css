@@ -31,3 +31,210 @@
     order: unset;
   }
 }
+
+.columns.columns3 {
+  max-width: 1000px;
+  margin: 48px auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Main row: two columns horizontally, centered vertically */
+.columns.columns3 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 420px;
+  width: 100%;
+  gap: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* --- Left image column (peach bg, about 45%) --- */
+.columns.columns3 > div > .columns-img-col {
+  background: #f8b6a8;
+  flex: 0 0 44%;
+  max-width: 44%;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Hide "empty" middle column */
+.columns.columns3 > div > div:nth-child(2) {
+  display: none;
+}
+
+/* Responsive: Stack vertically on mobile */
+@media (width <= 900px) {
+  .columns.columns3 > div {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+  }
+
+  .columns.columns3 > div > .columns-img-col,
+  .columns.columns3 > div > div:nth-child(3) {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    min-height: 220px;
+    padding: 32px 6vw 16px;
+    height: auto;
+  }
+
+  .columns.columns3 > div > .columns-img-col {
+    padding-bottom: 0;
+  }
+}
+
+/* --- Image sizing and containment --- */
+.columns.columns3 > div > .columns-img-col picture,
+.columns.columns3 > div > .columns-img-col img {
+  display: block;
+  max-width: 94%;
+  max-height: 340px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* --- Right column: Text content (about 56%) --- */
+.columns.columns3 > div > div:nth-child(3) {
+  background: #fff;
+  flex: 1 1 56%;
+  max-width: 56%;
+  min-width: 270px;
+  padding: 48px 56px 48px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (width <= 900px) {
+  .columns.columns3 > div > div:nth-child(3) {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    padding: 24px 6vw 32px;
+  }
+}
+
+/* --- Heading style --- */
+.columns.columns3 > div > div:nth-child(3) h2 {
+  color: #010C66;
+  font-size: 24px;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+/* --- Intro paragraph --- */
+.columns.columns3 > div > div:nth-child(3) > p:first-of-type {
+  font-size: 16px;
+  color: #22223b;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* --- Steps list --- */
+.columns.columns3 > div > div:nth-child(3) ol {
+  color: #010C66;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 32px;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.columns.columns3 > div > div:nth-child(3) ol li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #010C66;
+}
+
+.columns.columns3 > div > div:nth-child(3) ol li strong {
+  font-weight: 700;
+  color: #010C66;
+}
+
+/* --- CTA block at bottom --- */
+.columns.columns3 > div > div:nth-child(3) p:last-of-type {
+  margin-top: 32px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Secondary CTA link */
+.columns.columns3 > div > div:nth-child(3) p:last-of-type a:last-child {
+  color: #1072D7;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+/* Apply now button */
+.columns.columns3 > div > div:nth-child(3) p:last-of-type a:first-child {
+  display: inline-block;
+  background: #010C66;
+  color: #fff;
+  border-radius: 24px;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 8px;
+  box-shadow: 0 2px 6px 0 rgb(1 12 102 / 12%);
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.columns.columns3 > div > div:nth-child(3) p:last-of-type a:first-child:hover {
+  background: #07218A;
+}
+
+/* --- Spacing for visual polish --- */
+.columns.columns3 > div > div:nth-child(3) > *:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+/* Responsive tweaks for CTA */
+@media (width <= 600px) {
+  .columns.columns3 > div > div:nth-child(3) p:last-of-type {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* Remove default margin from last paragraph or list */
+.columns.columns3 > div > div:nth-child(3) p:last-of-type,
+.columns.columns3 > div > div:nth-child(3) ol:last-of-type {
+  margin-bottom: 0;
+}
