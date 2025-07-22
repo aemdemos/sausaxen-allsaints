@@ -428,19 +428,6 @@
       ]
     },
     {
-      "name": "unknown",
-      "cluster": 17,
-      "instances": [
-        {
-          "url": "https://www.nrma.com.au/home-loans/complaints",
-          "urlHash": "b7fdc77be2b826b7d51534d4f105875352f80b03",
-          "uuid": "b7fdc77b-02-ab3e4de776b49f538ccb9d433b686862faf5a7cc",
-          "xpath": "/html[1]/body[1]/div[3]",
-          "section": "section-3"
-        }
-      ]
-    },
-    {
       "name": "Columns",
       "cluster": 18,
       "source": "Columns",
@@ -759,6 +746,19 @@
           "urlHash": "331fb09800cff78fef525b022a936269e0486717",
           "uuid": "331fb098-02-5bedc05ca1e50f0bcc21b568cc600e801fe9e021",
           "xpath": "/html[1]/body[1]/main[1]/div[1]/section[1]/section[1]/div[1]/div[1]/div[1]/section[2]"
+        }
+      ]
+    },
+    {
+      "name": "Cards (no images)",
+      "cluster": 35,
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/home-loans/complaints",
+          "urlHash": "b7fdc77be2b826b7d51534d4f105875352f80b03",
+          "uuid": "b7fdc77b-02-ab3e4de776b49f538ccb9d433b686862faf5a7cc",
+          "xpath": "/html[1]/body[1]/div[3]",
+          "section": "section-3"
         }
       ]
     }
