@@ -1,3 +1,4 @@
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -24,4 +25,153 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.cards.cards12 {
+  background: #fff;
+  margin: 0;
+  padding: 0 40px 0 110px;
+  min-height: 42px;
+  max-width: 100vw;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.cards.cards12 > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 44px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: transparent;
+}
+
+.cards.cards12 > ul > li {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  box-shadow: none;
+}
+
+.cards.cards12 .cards-card-body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.cards.cards12 a.button,
+.cards.cards12 a {
+  all: unset;
+  display: inline-block;
+  color: #001965;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+  padding: 0 10px;
+  margin: 0;
+  min-width: 0;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.cards.cards12 a.button:hover,
+.cards.cards12 a:hover {
+  color: #039;
+  text-decoration: underline;
+}
+
+.cards.cards12 .button-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.cards.cards12 > ul > li:nth-child(2),
+.cards.cards12 > ul > li:nth-child(3),
+.cards.cards12 > ul > li:nth-child(4) {
+  display: none;
+}
+
+.cards.cards12 > ul > li:nth-last-child(2) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.cards.cards12 > ul > li:nth-last-child(2) a,
+.cards.cards12 > ul > li:last-child p {
+  color: #001965;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0 0 0 12px;
+  padding: 0;
+  background: none;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+.cards.cards12 > ul > li:last-child p {
+  font-size: 15px;
+  color: #001965;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 10px;
+  background: none;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.cards.cards12 > ul > li:last-child p:hover {
+  color: #039;
+  text-decoration: underline;
+}
+
+.cards.cards12 > ul > li:first-child {
+  margin-left: 0;
+  padding-left: 28px;
+  border-left: 1px solid #001965;
+}
+
+.cards.cards12 > ul > li:first-child a {
+  padding-right: 22px;
+  background: url('data:image/svg+xml;utf8,<svg fill="navy" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M2 4l3 3 3-3"/></svg>') no-repeat right 6px center/12px 12px;
+  background-size: 12px 12px;
+}
+
+@media (width <= 700px) {
+  .cards.cards12 {
+    padding: 8px 0 8px 16px;
+  }
+
+  .cards.cards12 > ul {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .cards.cards12 > ul > li:first-child {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
