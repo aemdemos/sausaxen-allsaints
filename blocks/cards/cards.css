@@ -670,3 +670,143 @@
     width: 100%;
   }
 }
+
+
+.cards {
+  padding: 48px 0;
+  background: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards > ul > li {
+  background: #f5f8fb;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px 0 rgb(0 25 74 / 9%);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 110px;
+  border: none;
+  transition: box-shadow 0.2s;
+  width: 100%;
+  padding: 0;
+}
+
+/* Always reserve two columns inside the card with flexbox */
+.cards > ul > li > .cards-card-body {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 0 20px;
+  margin: 0;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+}
+
+/* Make sure empty first column still reserves side space */
+.cards > ul > li > .cards-card-body:first-child {
+  min-width: 32px;
+}
+
+/* Center the right-side content and allow button to size to content */
+.cards > ul > li > .cards-card-body:last-child {
+  justify-content: center;
+  align-items: center;
+  padding: 24px 20px;
+}
+
+/* Remove "pill" look from buttons/links, let card act as the only background */
+.cards .button-container .button,
+.cards .button-container a.button {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 28px;
+  background: #00194A;
+  color: #fff;
+  box-shadow: none;
+  transition: background 0.2s;
+  text-align: center;
+  letter-spacing: 0.01em;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Ensure all links inside cards look like buttons for visual consistency */
+.cards > ul > li > .cards-card-body:last-child a:not(.button) {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 28px;
+  background: #00194A;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.01em;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+/* Button hover effect */
+.cards .button-container .button:hover,
+.cards > ul > li > .cards-card-body:last-child a:not(.button):hover {
+  background: #16316f;
+}
+
+/* Responsive: stack cards, adjust paddings and grid */
+@media (width <= 900px) {
+  .cards {
+    padding: 32px 0;
+  }
+
+  .cards > ul {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cards > ul > li {
+    min-height: 0;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .cards > ul > li > .cards-card-body {
+    padding: 12px 8px;
+    min-width: 0;
+  }
+
+  .cards > ul > li > .cards-card-body:last-child {
+    padding: 16px 8px;
+  }
+}
+
+/* Remove possible left border artifact from outermost container */
+.cards {
+  border-left: none;
+}
