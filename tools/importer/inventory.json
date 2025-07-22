@@ -486,6 +486,21 @@
       ]
     },
     {
+      "name": "Table",
+      "cluster": 21,
+      "source": "Table",
+      "target": "Table",
+      "key": "table21",
+      "instances": [
+        {
+          "url": "https://www.nrma.com.au/home-loans/calculators",
+          "urlHash": "76afb1bdbb15cabf6e5b3d7ead320acec57b96b7",
+          "uuid": "76afb1bd-03-78ec29c973388e39a59facf37e398698d63a9061",
+          "xpath": "/html[1]/body[1]/main[1]/div[1]/section[1]/section[1]/div[1]/div[1]/div[1]/section[3]"
+        }
+      ]
+    },
+    {
       "name": "Columns",
       "cluster": 21,
       "source": "Columns",
@@ -776,7 +791,7 @@
       "url": "https://www.nrma.com.au/home-loans/rates-fees",
       "urlHash": "1b27225a33359e1462174d3d1e723903f1dda38c",
       "uuid": "1b27225a-03-78ec29c973388e39a59facf37e398698d63a9061",
-      "xpath": "/html[1]/body[1]/main[1]/div[1]/section[1]/section[1]/div[1]/div[1]/div[1]/section[3]"
+      "xpath": "/html/body/main/div/section/section[1]/div/div[1]/div/section[3]/div/div/div/div[1]/div[2]"
     },
     {
       "url": "https://www.nrma.com.au/home-loans/rates-fees",
@@ -856,12 +871,6 @@
       "uuid": "76afb1bd-01-445572fe9c116a79ec495cf4ba0e11308863911d",
       "xpath": "/html[1]/body[1]/main[1]/div[1]/section[1]/section[1]/div[1]/div[1]/div[1]/section[1]",
       "section": "section-1"
-    },
-    {
-      "url": "https://www.nrma.com.au/home-loans/calculators",
-      "urlHash": "76afb1bdbb15cabf6e5b3d7ead320acec57b96b7",
-      "uuid": "76afb1bd-03-78ec29c973388e39a59facf37e398698d63a9061",
-      "xpath": "/html[1]/body[1]/main[1]/div[1]/section[1]/section[1]/div[1]/div[1]/div[1]/section[3]"
     },
     {
       "url": "https://www.nrma.com.au/home-loans/calculators",
