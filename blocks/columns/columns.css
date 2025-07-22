@@ -238,3 +238,176 @@
 .columns.columns3 > div > div:nth-child(3) ol:last-of-type {
   margin-bottom: 0;
 }
+
+/* GENERATED CSS */
+.columns.columns7 {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: var(--body-font-family);
+}
+
+/* --- MAIN LAYOUT: 1st column left, 2nd+3rd grouped tightly as FAQ area --- */
+.columns.columns7 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px; /* tighter gap for FAQ grouping */
+  padding: 32px 0;
+  width: 100%;
+}
+
+/* --- LEFT COLUMN --- */
+.columns.columns7 > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 190px;
+  max-width: 260px;
+  flex: 0 0 220px;
+}
+
+/* Heading */
+.columns.columns7 > div > div:first-child h2 {
+  color: #010C66;
+  font-size: 24px;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+/* Description text */
+.columns.columns7 > div > div:first-child p:not(.button-container) {
+  color: #010C66;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 18px;
+  line-height: 1.5;
+}
+
+/* 'View all FAQs' button styling */
+.columns.columns7 > div > div:first-child .button-container {
+  margin: 0;
+  width: auto;
+}
+
+.columns.columns7 > div > div:first-child .button-container .button {
+  background: #010C66;
+  color: #fff;
+  border-radius: 999px;
+  min-width: 146px;
+  max-width: 220px;
+  min-height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* --- FAQ AREA: TWO COLS SIDE-BY-SIDE --- */
+.columns.columns7 > div > div:nth-child(2),
+.columns.columns7 > div > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 1 180px;
+  min-width: 160px;
+  max-width: 210px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reduce gap between FAQ columns for tighter grouping */
+.columns.columns7 > div > div:nth-child(2) {
+  margin-right: 8px;
+}
+
+/* FAQ links: allow wrapping, always left-aligned, chevron always visible */
+.columns.columns7 > div > div:nth-child(2) .button-container .button,
+.columns.columns7 > div > div:nth-child(3) .button-container .button {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: left;
+  background: none;
+  color: #010C66;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 20px 0 0; /* padding-right for chevron */
+  margin: 0;
+  box-shadow: none;
+  border: none;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  transition: color 0.2s;
+  line-height: 1.4;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Chevron always beside last text line, visible even if link wraps */
+.columns.columns7 > div > div:nth-child(2) .button-container .button::after,
+.columns.columns7 > div > div:nth-child(3) .button-container .button::after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  background: url('data:image/svg+xml;utf8,<svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><polyline points="4,2 8,6 4,10" fill="none" stroke="%23010C66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center / 12px 12px;
+  content: "";
+  pointer-events: none;
+}
+
+/* Hover effect for FAQ links */
+.columns.columns7 > div > div:nth-child(2) .button-container .button:hover,
+.columns.columns7 > div > div:nth-child(3) .button-container .button:hover,
+.columns.columns7 > div > div:nth-child(2) .button-container .button:focus,
+.columns.columns7 > div > div:nth-child(3) .button-container .button:focus {
+  color: #1d3ecf;
+}
+
+/* Remove any bottom margin on last FAQ link for clean grid bottom */
+.columns.columns7 > div > div:nth-child(2) .button-container:last-child,
+.columns.columns7 > div > div:nth-child(3) .button-container:last-child {
+  margin-bottom: 0;
+}
+
+/* --- RESPONSIVE: stack columns and adjust FAQ area on mobile --- */
+@media (width <= 900px) {
+  .columns.columns7 > div {
+    flex-direction: column;
+    gap: 28px 0;
+    padding: 16px 0;
+  }
+
+  .columns.columns7 > div > div {
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+
+  .columns.columns7 > div > div:nth-child(2),
+  .columns.columns7 > div > div:nth-child(3) {
+    margin-right: 0;
+    gap: 16px;
+    max-width: none;
+  }
+
+  .columns.columns7 > div > div:first-child {
+    max-width: 100%;
+  }
+}
