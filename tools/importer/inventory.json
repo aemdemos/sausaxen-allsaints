@@ -412,7 +412,7 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "new",
       "cluster": 16,
       "source": "Columns",
       "target": "Columns (columns16)",
