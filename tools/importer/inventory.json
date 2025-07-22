@@ -474,7 +474,7 @@
       "name": "Hero",
       "cluster": 20,
       "source": "Hero",
-      "target": "Hero",
+      "target": "Hero (hero20)",
       "key": "hero20",
       "instances": [
         {
@@ -489,7 +489,7 @@
       "name": "Table",
       "cluster": 21,
       "source": "Table",
-      "target": "Table",
+      "target": "Table (table21)",
       "key": "table21",
       "instances": [
         {
