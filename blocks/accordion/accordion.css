@@ -786,7 +786,6 @@
   }
 }
 
-
 .accordion.accordion29 {
   width: 970px;
   max-width: 100%;
@@ -796,8 +795,6 @@
   padding: 0;
   border: none;
   display: block;
-
-  /* Remove fixed height to allow content display */
 }
 
 .accordion.accordion29 details {
@@ -909,4 +906,120 @@
     width: 100%;
     min-width: 0;
   }
+}
+
+.accordion.accordion32 {
+  margin: 24px auto 32px;
+  background: #fff;
+  border: 1px solid #001A70;
+  border-radius: 0;
+  max-width: 680px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  display: block;
+}
+
+.accordion.accordion32 > details {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+}
+
+.accordion.accordion32 > details + details {
+  border-top: 1px solid #001A70;
+  margin-top: 0;
+}
+
+/* FAQ row: flex for side-by-side content, perfect vertical centering */
+.accordion.accordion32 summary,
+.accordion.accordion32 .accordion-item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 1.4;
+  color: #001A70;
+  font-weight: 600;
+  background: #fff;
+  cursor: pointer;
+  min-height: 56px;
+  padding: 0 40px 0 24px;
+  outline: none;
+  border: none;
+  margin: 0;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+/* Remove default marker */
+.accordion.accordion32 summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Ensures correct vertical alignment for the summary text if wrapped in <p> */
+.accordion.accordion32 summary p {
+  margin: 0;
+  color: #001A70;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+
+/* Chevron / icon on right: SVG or known icon classes, large and vertically centered */
+.accordion.accordion32 summary svg,
+.accordion.accordion32 summary .icon,
+.accordion.accordion32 summary .chevron,
+.accordion.accordion32 summary .chevron-icon {
+  color: #001A70;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  margin-left: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle row highlight on hover/focus/active */
+.accordion.accordion32 summary:hover,
+.accordion.accordion32 summary:focus,
+.accordion.accordion32 details[open] summary {
+  background: #f7f9fc;
+}
+
+/* Accordion content body: compact, matches original, visually distinct from the row */
+.accordion.accordion32 .accordion-item-body {
+  padding: 12px 40px 16px 24px;
+  font-size: 15px;
+  color: #001A70;
+  font-weight: 400;
+  background: #fff;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* Responsive padding for mobile */
+@media (width <= 800px) {
+  .accordion.accordion32 {
+    max-width: 100%;
+  }
+
+  .accordion.accordion32 summary,
+  .accordion.accordion32 .accordion-item-label,
+  .accordion.accordion32 .accordion-item-body {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.accordion.accordion32 details {
+  margin-bottom: 0;
 }
