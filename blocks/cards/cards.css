@@ -28,7 +28,85 @@
   object-fit: cover;
 }
 
-/* ----------------- .cards.cards14 Styles (Moved up for specificity) ----------------- */
+/* ----------------- .cards.cardsnoimages28 Styles ----------------- */
+
+.cards.cardsnoimages28 {
+  background: #fafafb;
+  padding: 48px 0 56px;
+}
+
+.cards.cardsnoimages28 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards.cardsnoimages28 li {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgb(0 87 184 / 4.5%);
+  min-width: 300px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.cards.cardsnoimages28 .cards-card-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.cards.cardsnoimages28 .cards-card-body h3 {
+  color: #0a2e74;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  font-family: var(--heading-font-family);
+  line-height: 1.3;
+  text-align: left;
+}
+
+.cards.cardsnoimages28 .cards-card-body p {
+  color: #1760a5;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  font-family: var(--body-font-family);
+}
+
+@media (width <= 900px) {
+  .cards.cardsnoimages28 ul {
+    flex-direction: column;
+    gap: 24px;
+    max-width: 98vw;
+    align-items: center;
+  }
+
+  .cards.cardsnoimages28 li {
+    max-width: 480px;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* ----------------- .cards.cards14 Styles ----------------- */
 
 .cards.cards14 {
   background: #f7f7e8;
@@ -295,7 +373,6 @@
     gap: 14px;
     overflow-x: visible;
   }
-
   .cards.cards14 > ul > li {
     max-width: 100%;
     min-width: 0;
@@ -432,7 +509,9 @@
 
 .cards.cards12 > ul > li:first-child a {
   padding-right: 22px;
-  background: url(data:image/svg+xml;utf8,<svg fill=%27navy%27 width=%2710%27 height=%2710%27 viewBox=%270 0 10 10%27 xmlns=%27http://www.w3.org/2000/svg%27><path d=%27M2 4l3 3 3-3%27/></svg>) no-repeat right 6px center/12px 12px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJuYXZ5IiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjQgTDMgMyAzLTMiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
   background-size: 12px 12px;
 }
 
@@ -451,19 +530,5 @@
     border-left: none;
     margin-left: 0;
     padding-left: 0;
-  }
-}
-
-@media (width <= 900px) {
-  .cards.cards14 > ul {
-    flex-direction: column;
-    gap: 14px;
-    overflow-x: visible;
-  }
-
-  .cards.cards14 > ul > li {
-    max-width: 100%;
-    min-width: 0;
-    width: 100%;
   }
 }
