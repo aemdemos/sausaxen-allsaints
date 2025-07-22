@@ -1,4 +1,3 @@
-/* --- Base Columns Styles --- */
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -26,13 +25,13 @@
     flex-direction: unset;
     gap: 24px;
   }
+
   .columns > div > div {
     flex: 1;
     order: unset;
   }
 }
 
-/* --- .columns8 --- */
 .columns.columns8 {
   background: #faf8f6;
   padding: 24px 0;
@@ -167,12 +166,12 @@
   .columns.columns8 {
     padding: 10px 0;
   }
+
   .columns.columns8 > div {
     padding: 0 2px;
   }
 }
 
-/* --- .columns3 --- */
 .columns.columns3 {
   max-width: 1000px;
   margin: 48px auto;
@@ -219,6 +218,7 @@
     align-items: stretch;
     min-height: unset;
   }
+
   .columns.columns3 > div > .columns-img-col,
   .columns.columns3 > div > div:nth-child(3) {
     max-width: 100%;
@@ -228,6 +228,7 @@
     padding: 32px 6vw 16px;
     height: auto;
   }
+
   .columns.columns3 > div > .columns-img-col {
     padding-bottom: 0;
   }
@@ -363,7 +364,6 @@
   margin-bottom: 0;
 }
 
-/* --- .columns13 --- */
 .columns.columns13 {
   background: #fdf9fa;
   padding: 32px 0;
@@ -428,12 +428,14 @@
   .columns.columns13 {
     padding: 18px 0;
   }
+
   .columns.columns13 > div {
     flex-direction: column;
     gap: 24px;
     padding: 0 8px;
     max-width: 100%;
   }
+
   .columns.columns13 > div > div:first-child,
   .columns.columns13 > div > div:last-child {
     max-width: 100%;
@@ -441,4 +443,287 @@
     padding: 0;
     height: auto;
   }
+}
+
+
+.columns.columns15 {
+  max-width: 720px;
+  margin: 2.5rem auto;
+  background: #f8fafc;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 3%);
+  padding: 1.1rem 0.7rem;
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* Grid: reduce gap and column width for compactness */
+.columns.columns15 > div {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  align-items: flex-start;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+@media (width <= 900px) {
+  .columns.columns15 {
+    padding: 1rem 0.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    max-width: 100vw;
+    border-radius: 0;
+  }
+
+  .columns.columns15 > div {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Left column: tighter, compact, less vertical space */
+.columns.columns15 > div > div:first-child {
+  background: #f6fafd;
+  border-radius: 14px;
+  padding: 1.05rem 1rem 1rem;
+  color: #161c4c;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 0;
+  box-shadow: none;
+}
+
+/* Right column: slightly more compact, lighter background, less padding */
+.columns.columns15 > div > div:last-child {
+  background: #f9fbfd;
+  border-radius: 14px;
+  padding: 1.05rem 1.08rem 0.9rem;
+  color: #161c4c;
+  min-width: 0;
+  max-width: 360px;
+  box-shadow: none;
+  opacity: 1;
+  filter: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Compact headings */
+.columns.columns15 > div > div:first-child h3 {
+  color: #161c4c;
+  font-size: 1.09rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  padding: 0;
+  line-height: 1.21;
+}
+
+/* Results headings: blue, larger, more prominent */
+.columns.columns15 > div > div:last-child h3 {
+  color: #2365e6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.7rem 0 0.2rem;
+  line-height: 1.16;
+  padding: 0;
+}
+
+/* Form text, tighter spacing */
+.columns.columns15 > div > div:first-child p {
+  color: #161c4c;
+  font-size: 0.98rem;
+  margin: 0 0 0.20em;
+  font-weight: 400;
+  padding: 0;
+  line-height: 1.35;
+}
+
+/* Only style real fields as inputs */
+.columns.columns15 > div > div:first-child p:nth-of-type(3),
+.columns.columns15 > div > div:first-child p:nth-of-type(5),
+.columns.columns15 > div > div:first-child p:nth-of-type(7),
+.columns.columns15 > div > div:first-child p:nth-of-type(13),
+.columns.columns15 > div > div:first-child p:nth-of-type(15) {
+  background: #fff;
+  border: 1.4px solid #2365e6;
+  border-radius: 7px;
+  padding: 0.41rem 0.75rem;
+  font-size: 1.025rem;
+  color: #161c4c;
+  margin-bottom: 0.33rem;
+  font-weight: 500;
+  line-height: 1.25;
+  box-sizing: border-box;
+}
+
+/* Remove input box from headings, labels, and button row */
+.columns.columns15 > div > div:first-child h3,
+.columns.columns15 > div > div:first-child p:not(:nth-of-type(3), :nth-of-type(5), :nth-of-type(7), :nth-of-type(13), :nth-of-type(15)) {
+  border: none;
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Toggle as visually separated inline pills (simulate with span in markup if possible) */
+.columns.columns15 > div > div:first-child p:nth-of-type(9) {
+  display: flex;
+  flex-direction: row;
+  gap: 0.35rem;
+  margin: 0.22rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #161c4c;
+}
+
+.columns.columns15 > div > div:first-child p:nth-of-type(9) span {
+  display: inline-block;
+  padding: 0.18rem 0.9rem;
+  border-radius: 1.5em;
+  border: 1.2px solid #2365e6;
+  background: #fff;
+  color: #2365e6;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.16s, color 0.16s;
+}
+
+.columns.columns15 > div > div:first-child p:nth-of-type(9) span.selected {
+  background: #2365e6;
+  color: #fff;
+}
+
+/* Repayment type label (not blue) */
+.columns.columns15 > div > div:first-child p:nth-of-type(10) {
+  color: #161c4c;
+  font-weight: 600;
+  margin-bottom: 0.11rem;
+}
+
+/* Principal and interest highlight */
+.columns.columns15 > div > div:first-child p:nth-of-type(12) {
+  color: #2365e6;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+/* "Calculate" as visually distinct CTA button, not input box */
+.columns.columns15 > div > div:first-child p:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2365e6;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1.06rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgb(35 101 230 / 11%);
+  cursor: pointer;
+  margin: 0.38rem 0 0;
+  border: none;
+  text-align: center;
+  padding: 0.72rem 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  transition: background 0.18s;
+  user-select: none;
+}
+
+/* Results: left-align, reduce vertical space, numbers & headings prominent, label text softer */
+.columns.columns15 > div > div:last-child p {
+  color: #7c92b0;
+  font-size: 0.99rem;
+  margin-bottom: 0.28em;
+  font-weight: 400;
+  padding: 0;
+  line-height: 1.28;
+}
+
+/* Major headings/numbers */
+.columns.columns15 > div > div:last-child p:first-child,
+.columns.columns15 > div > div:last-child p:nth-of-type(2),
+.columns.columns15 > div > div:last-child p:nth-of-type(3) {
+  color: #2365e6;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 0.32em;
+  line-height: 1.1;
+}
+
+/* Bold numbers in results */
+.columns.columns15 > div > div:last-child p strong,
+.columns.columns15 > div > div:last-child p b {
+  color: #2365e6;
+  font-size: 1.20rem;
+  font-weight: 700;
+}
+
+/* Results area CTA: smaller, soft blue, tighter size */
+.columns.columns15 > div > div:last-child .button,
+.columns.columns15 > div > div:last-child a.button {
+  background: #e7f0fa;
+  color: #2365e6;
+  border: none;
+  border-radius: 30px;
+  padding: 0.54rem 1.1rem;
+  font-size: 1.01rem;
+  font-weight: bold;
+  box-shadow: 0 2px 7px rgb(35 101 230 / 9%);
+  margin-top: 0.68rem;
+  margin-bottom: 0.15rem;
+  transition: background 0.16s;
+  text-align: center;
+  display: inline-block;
+}
+
+.columns.columns15 > div > div:last-child .button:hover,
+.columns.columns15 > div > div:last-child a.button:hover {
+  background: #d0e2f7;
+}
+
+/* Footnote circles: stronger border/shadow for prominence */
+.columns.columns15 > div > div:last-child .button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.18em;
+}
+
+.columns.columns15 > div > div:last-child .button {
+  background: #f2f6fb;
+  color: #2365e6;
+  box-shadow: 0 2px 6px rgb(75 132 226 / 13%);
+  border: 1.5px solid #b5c7ec;
+  font-size: 0.96rem;
+  font-weight: 600;
+  min-width: 2em;
+  min-height: 2em;
+  padding: 0;
+  line-height: 2em;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0.43em;
+}
+
+/* Responsive fix */
+@media (width <= 900px) {
+  .columns.columns15 > div > div:first-child,
+  .columns.columns15 > div > div:last-child {
+    max-width: none;
+    margin: 0;
+    padding: 0.55rem 0.2rem;
+    border-radius: 0;
+  }
+}
+
+/* Remove horizontal overflow */
+.columns.columns15 {
+  overflow-x: auto;
 }
