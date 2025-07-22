@@ -1,4 +1,4 @@
-/* Accordion base styles (least specific, come first) */
+/* Accordion base styles */
 .accordion details {
   border: 1px solid #dadada;
 }
@@ -58,118 +58,6 @@
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
-}
-
-/* Accordion 9 */
-.accordion.accordion9 {
-  max-width: 716px;
-  margin: 40px auto;
-  background: #fff;
-  border: 1px solid #BDBDBD;
-  border-radius: 0;
-  box-sizing: border-box;
-  padding: 0;
-  display: block;
-  overflow: hidden;
-}
-
-.accordion.accordion9 details {
-  border: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background: #fff;
-}
-
-.accordion.accordion9 details + details {
-  border-top: 1px solid #BDBDBD;
-  margin: 0;
-}
-
-.accordion.accordion9 summary {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 24px 36px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #001965;
-  font-family: inherit;
-  line-height: 1.35;
-  background: #fff;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  min-height: 54px;
-  transition: background 0.2s;
-  position: relative;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-.accordion.accordion9 summary::-webkit-details-marker {
-  display: none;
-}
-
-.accordion.accordion9 summary:focus,
-.accordion.accordion9 summary:hover {
-  background: #fff;
-}
-
-.accordion.accordion9 summary p {
-  margin: 0;
-  text-align: left;
-  color: #001965;
-  font-size: 15px;
-  font-weight: 500;
-  flex: 1 1 0%;
-  min-width: 0;
-  line-height: 1.4;
-  padding: 0;
-}
-
-.accordion.accordion9 summary::after {
-  content: '';
-  display: block;
-  margin-left: 24px;
-  position: static;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #001965;
-  border-bottom: 2px solid #001965;
-  border-top: none;
-  border-left: none;
-  background: none;
-  pointer-events: none;
-  transition: transform 0.2s;
-  transform: rotate(45deg);
-}
-
-.accordion.accordion9 details[open] summary::after {
-  transform: rotate(-135deg);
-}
-
-.accordion.accordion9 .accordion-item-body {
-  padding: 0 36px 24px;
-  color: #001965;
-  font-size: 14px;
-  background: #fff;
-  font-weight: 400;
-}
-
-.accordion.accordion9 .accordion-item-body p {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  color: #001965;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.accordion.accordion9 .accordion-item-body a {
-  color: #001965;
-  text-decoration: underline;
-  font-weight: 500;
 }
 
 /* Accordion 11 */
@@ -414,7 +302,7 @@
   font-weight: 500;
 }
 
-/* Accordion 29 (most specific, comes after all other variants) */
+/* Accordion 29 */
 .accordion.accordion29 {
   display: block;
   background-color: #fcf9f8;
@@ -532,29 +420,129 @@
   outline-offset: 2px;
 }
 
-/* Media queries remain as is, following base and specific rules */
+/* Accordion 9 */
+.accordion.accordion9 {
+  background: #fff;
+  border: 1px solid #BDBDBD;
+  border-radius: 0;
+  box-sizing: border-box;
+  width: 660px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove any margin/padding/border except separator from details */
+.accordion.accordion9 details {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+}
+
+/* Add separator only between rows, never above first */
+.accordion.accordion9 details + details {
+  border-top: 1px solid #BDBDBD;
+}
+
+/* Each "row" flex, side by side, text fills left, chevron on right */
+.accordion.accordion9 summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+  min-height: 48px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #001A70;
+  background: #fff;
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+.accordion.accordion9 summary p {
+  flex: 1 1 0%;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  color: #001A70;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.accordion.accordion9 summary::after {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid #001A70;
+  border-bottom: 2px solid #001A70;
+  border-top: none;
+  border-left: none;
+  background: none;
+  pointer-events: none;
+  transition: transform 0.2s;
+  transform: rotate(45deg);
+  margin-left: 0;
+  margin-right: 0;
+  align-self: center;
+}
+
+.accordion.accordion9 details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.accordion.accordion9 .accordion-item-body {
+  padding: 0 24px 24px;
+  color: #001A70;
+  font-size: 15px;
+  background: #fff;
+  font-weight: 400;
+}
+
+.accordion.accordion9 .accordion-item-body p {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+  color: #001A70;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.accordion.accordion9 .accordion-item-body a {
+  color: #001A70;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Media Queries: Use modern range notation */
 @media (width <= 900px) {
-  .accordion.accordion9 {
-    max-width: 100%;
-    margin: 32px 0;
-    border-radius: 0;
-  }
-
-  .accordion.accordion9 summary,
-  .accordion.accordion9 .accordion-item-body {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
   .accordion.accordion22 {
     margin-left: 16px;
     max-width: 100%;
   }
-
   .accordion.accordion22 summary,
   .accordion.accordion22 .accordion-item-body {
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .accordion.accordion9 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .accordion.accordion9 summary,
+  .accordion.accordion9 .accordion-item-body {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 
@@ -564,14 +552,12 @@
     padding-left: 0;
     padding-right: 0;
   }
-
   .accordion.accordion11 > div {
     width: 100%;
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
   }
-
   .accordion.accordion11 summary,
   .accordion.accordion11 .accordion-item-body {
     padding-left: 10px;
