@@ -1,3 +1,4 @@
+/* ----------------- General Cards Styles ----------------- */
 
 .cards > ul {
   list-style: none;
@@ -26,6 +27,283 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* ----------------- .cards.cards14 Styles (Moved up for specificity) ----------------- */
+
+.cards.cards14 {
+  background: #f7f7e8;
+  padding: 32px 0;
+}
+
+.cards.cards14 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards.cards14 > ul > li {
+  flex: 0 0 305px;
+  min-width: 305px;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: #222B45;
+}
+
+.cards.cards14 .cards-card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 18px;
+  background: none;
+  border-radius: 14px;
+  margin: 0;
+}
+
+.cards.cards14 .cards-card-body:empty {
+  display: none;
+}
+
+.cards.cards14 .cards-card-body > p:first-of-type {
+  background: #14b661;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 13px;
+  padding: 2px 14px;
+  margin-bottom: 12px;
+  margin-top: 0;
+  display: inline-block;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.cards.cards14 .cards-card-body > h3 {
+  color: #001b44;
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  letter-spacing: 0.01em;
+}
+
+.cards.cards14 .cards-card-body > ul:first-of-type {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.cards.cards14 .cards-card-body > ul:first-of-type > li {
+  color: #47546D;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.cards.cards14 .cards-card-body .rate-group {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+.cards.cards14 .cards-card-body > p:nth-of-type(3),
+.cards.cards14 .cards-card-body > p:nth-of-type(7) {
+  color: #001b44;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 2px;
+  padding: 0;
+  line-height: 1.2;
+  display: inline;
+}
+
+.cards.cards14 .cards-card-body > p:nth-of-type(4),
+.cards.cards14 .cards-card-body > p:nth-of-type(8) {
+  font-size: 2.02rem;
+  color: #1564C0;
+  font-weight: 800;
+  margin: 0 0 2px;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  display: inline;
+  vertical-align: baseline;
+}
+
+.cards.cards14 .cards-card-body > h4[id^="repayments"] + p {
+  font-size: 1.19rem;
+  font-weight: 700;
+  color: #001b44;
+  margin-bottom: 2px;
+  margin-top: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.cards.cards14 .cards-card-body > h4[id^="repayments"] + p > span {
+  color: #7a8da9;
+  font-weight: 400;
+  font-size: 0.97em;
+  margin-left: 2px;
+}
+
+.cards.cards14 .cards-card-body > h4[id^="repayments"] + p + p {
+  color: #8992A6;
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+  margin-top: 5px;
+}
+
+.cards.cards14 .cards-card-body > p.button-container {
+  display: inline;
+  margin: 0 0 0 2px;
+  padding: 0;
+  vertical-align: super;
+}
+
+.cards.cards14 .cards-card-body > p.button-container > a.button {
+  background: none;
+  color: #7a8da9;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0 2px 0 0;
+  margin: 0;
+  min-width: 0;
+  border-radius: 0;
+  display: inline;
+  box-shadow: none;
+  border: none;
+  vertical-align: super;
+  white-space: unset;
+}
+
+.cards.cards14 .cards-card-body > p.button-container > a.button > sup {
+  font-size: 0.8em;
+  color: #7a8da9;
+  vertical-align: super;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.cards.cards14 .cards-card-body > p:nth-of-type(3) + p:nth-of-type(4),
+.cards.cards14 .cards-card-body > p:nth-of-type(7) + p:nth-of-type(8) {
+  margin-left: 4px;
+}
+
+.cards.cards14 .cards-card-body > h4[id^="features"] {
+  color: #001b44;
+  font-size: 1.07rem;
+  font-weight: 700;
+  border-top: 1px solid #E5E7EB;
+  padding-top: 19px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.cards.cards14 .cards-card-body > ul:nth-of-type(2) {
+  list-style: none;
+  margin: 0 0 13px;
+  padding: 0;
+}
+
+.cards.cards14 .cards-card-body > ul:nth-of-type(2) > li {
+  font-size: 0.97rem;
+  margin-bottom: 10px;
+  color: #222b45;
+  padding-left: 0;
+  line-height: 1.5;
+  position: relative;
+}
+
+.cards.cards14 .cards-card-body > ul:nth-of-type(2) > li:last-child {
+  margin-bottom: 0;
+}
+
+.cards.cards14 .cards-card-body > ul:nth-of-type(2) > li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #1564C0;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.cards.cards14 .cards-card-body > h4[id^="repayments"] {
+  color: #001b44;
+  font-weight: 700;
+  font-size: 1.08rem;
+  margin-top: 18px;
+  margin-bottom: 4px;
+  border: none;
+  padding: 0;
+  letter-spacing: 0.01em;
+}
+
+.cards.cards14 .cards-card-body > p.button-container:last-of-type {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.cards.cards14 .cards-card-body > p.button-container:last-of-type > a.button {
+  background: #012169;
+  color: #fff;
+  font-size: 1.19rem;
+  border-radius: 12px;
+  font-weight: 700;
+  width: 100%;
+  padding: 18px 0;
+  margin: 0;
+  letter-spacing: 0.5px;
+  border: none;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
+  cursor: pointer;
+  transition: background 0.15s;
+  display: block;
+  white-space: normal;
+  text-overflow: unset;
+  overflow: visible;
+}
+
+.cards.cards14 .cards-card-body > p.button-container:last-of-type > a.button:hover,
+.cards.cards14 .cards-card-body > p.button-container:last-of-type > a.button:focus {
+  background: #0a2a63;
+}
+
+@media (width <= 900px) {
+  .cards.cards14 > ul {
+    flex-direction: column;
+    gap: 14px;
+    overflow-x: visible;
+  }
+
+  .cards.cards14 > ul > li {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+/* ----------------- .cards.cards12 Styles ----------------- */
 
 .cards.cards12 {
   background: #fff;
@@ -154,7 +432,7 @@
 
 .cards.cards12 > ul > li:first-child a {
   padding-right: 22px;
-  background: url('data:image/svg+xml;utf8,<svg fill="navy" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><path d="M2 4l3 3 3-3"/></svg>') no-repeat right 6px center/12px 12px;
+  background: url(data:image/svg+xml;utf8,<svg fill=%27navy%27 width=%2710%27 height=%2710%27 viewBox=%270 0 10 10%27 xmlns=%27http://www.w3.org/2000/svg%27><path d=%27M2 4l3 3 3-3%27/></svg>) no-repeat right 6px center/12px 12px;
   background-size: 12px 12px;
 }
 
@@ -173,5 +451,19 @@
     border-left: none;
     margin-left: 0;
     padding-left: 0;
+  }
+}
+
+@media (width <= 900px) {
+  .cards.cards14 > ul {
+    flex-direction: column;
+    gap: 14px;
+    overflow-x: visible;
+  }
+
+  .cards.cards14 > ul > li {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
   }
 }
