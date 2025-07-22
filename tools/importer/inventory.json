@@ -428,7 +428,7 @@
       ]
     },
     {
-      "name": "unknown",
+      "name": "Cards (no images)",
       "cluster": 17,
       "instances": [
         {
@@ -620,7 +620,7 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Columns",
       "cluster": 26,
       "source": "Columns",
       "target": "Columns (columns26)",
