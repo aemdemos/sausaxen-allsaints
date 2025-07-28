@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/",
-    "/content/aem-boilerplate/configuration:/.helix/config.json",
-    "/content/aem-boilerplate/metadata:/metadata.json"
+    "/content/nrma-home-loans/:/",
+    "/content/nrma-home-loans/configuration:/.helix/config.json",
+    "/content/nrma-home-loans/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/nrma-home-loans/"
   ]
 }
